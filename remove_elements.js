@@ -1,6 +1,6 @@
-var toDelete = { "leftNav-content" : [  "fastFacts",
-                                        "fastfacts" ]
-               };
+var toDelete = [    "fastfacts",
+                    "fastFacts" 
+               ];
 
 function removeElements(parentDiv, childDiv) {
     if (childDiv == parentDiv) {
@@ -17,12 +17,6 @@ function removeElements(parentDiv, childDiv) {
     }
 }
 
-var children;
-for (parent in toDelete) {
-    children = toDelete[parent];
-    alert("Parent: " + parent + ", child: " + children);
-    for (child in children) {
-        removeElements(parent, child);
-    }
-
+for (element in toDelete) {
+    document.getElementById(element).parentNode.removeChild(element);
 }    

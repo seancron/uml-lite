@@ -3,12 +3,14 @@
     "version"       : "1.0",
     "description"   : "unclutters the University of Massachusetts - Lowell website. Increases usability for current students",
     "permissions"   : [
-        "http://*.uml.edu*"
+        "tabs",
+        "bookmarks",
+        "http://*.*.*"
     ],
     "content_scripts": [
         {
-            "matches"   : ["http://*.uml.edu*"],
-            "js"        : ["",
+            "matches"   : ["http://*.uml.edu/*"],
+            "js"        : ["remove_elements.js"
                             ],
             "run_at"    : "document_start",
             "all_frames": true
